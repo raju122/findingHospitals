@@ -20,7 +20,7 @@ public class listsurgeries extends Base{
 		
 		sg.listofsurgeries(sg.surgerieslist);
 		logger.info("All the list of surgeries have been captured");	
-		scrollDown(sg.getElement());
+		scroll(sg.getElement());
 		captureScreen("surgeries");
 		
 	}

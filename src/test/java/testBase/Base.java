@@ -143,7 +143,7 @@ public class Base {
 	
 		
 	}
-   public void scrollDown(WebElement ele) {
+   public void scroll(WebElement ele) {
 		
 		
 		JavascriptExecutor js=(JavascriptExecutor)driver;

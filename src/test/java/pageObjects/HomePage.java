@@ -17,7 +17,7 @@ public class HomePage extends Basepage {
 
 	public HomePage(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
+		
 	}
 	//Locating WebElements.......
 	@FindBy(xpath="//*[@id=\"c-omni-container\"]/div/div[1]/div[1]/input")
@@ -29,14 +29,20 @@ public class HomePage extends Basepage {
 	WebElement specdepartment;
 	@FindBy(xpath="//*[@id=\"c-omni-container\"]/div/div[1]/div[2]/div[2]/div[1]/span[1]/div")
 	WebElement locationspec;
+	@FindBy(xpath="//*[@id=\"container\"]/div/div[4]/div/div[1]/div/div[1]/div[1]/h1")
+	public WebElement selectedLocation;
 	
-	public void location(String text) {
-		location.click();
-		location.clear();
+	//locating selected specialist
+	@FindBy(xpath="//*[@id=\"container\"]/div/div[4]/div/div[1]/div/div[2]/div[1]/div[1]/div[2]/div[1]/div/div/div[1]/span")
+	public WebElement selectedSpecialist;
+	
+	public void location_click(String text) {
+		
+	
 		location.sendKeys(text);
 		
 	}
-	public void department(String dep) throws InterruptedException {
+	public void department_click(String dep) throws InterruptedException {
 		department.click();
 		department.sendKeys(dep);
 		Thread.sleep(1000);
@@ -48,6 +54,13 @@ public class HomePage extends Basepage {
 	}
 	public void locationspec() {
 		locationspec.click();
+	}
+	public String getSelectedLocation() {
+		return selectedLocation.getText();
+	}
+	
+	public String getSelectedSpecialist() {
+		return selectedSpecialist.getText();
 	}
 }
 	

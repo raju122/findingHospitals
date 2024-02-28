@@ -1,15 +1,16 @@
-14:40:20.133 [main] INFO  testCases.home - All the sortings have been done
-14:40:22.850 [main] INFO  testCases.home - Details of the doctors have been fetched
-14:41:56.814 [main] INFO  testCases.demo - Invalid details have been entered
-14:42:47.924 [main] INFO  testCases.listsurgeries - All the list of surgeries have been captured
-14:44:42.276 [main] INFO  testCases.Validdemo - Valid details enabled us to schedule a demo
-11:45:27.263 [main] INFO  testCases.home - Loaction and specialization selected
-11:49:02.919 [main] INFO  testCases.home - All the sortings have been done
-12:27:22.387 [main] INFO  testCases.home - Loaction and specialization selected
-12:27:44.964 [main] INFO  testCases.home - All the sortings have been done
-12:27:47.903 [main] INFO  testCases.home - Details of the doctors have been fetched
-12:29:15.903 [main] INFO  testCases.demo - Invalid details have been entered
-12:30:26.223 [main] INFO  testCases.listsurgeries - All the list of surgeries have been captured
-12:31:56.624 [main] INFO  testCases.Validdemo - Valid details enabled us to schedule a demo
-13:22:21.547 [main] INFO  testCases.demo - Invalid details have been entered
-13:24:37.908 [main] INFO  testCases.listsurgeries - All the list of surgeries have been captured
+15:03:25.319 [main] INFO  testCases.home - Details of the doctors have been fetched
+15:05:00.416 [main] INFO  testCases.demo - Invalid details have been entered
+15:06:13.211 [main] INFO  testCases.listsurgeries - All the list of surgeries have been captured
+15:11:42.203 [main] INFO  testCases.home - ****Starting Testcase two extracting doctor detials****
+15:12:28.951 [main] INFO  testCases.home - ****checking the selected location ****
+15:15:54.814 [main] INFO  testCases.home - All the sortings have been done
+15:15:57.558 [main] INFO  testCases.home - Details of the doctors have been fetched
+15:17:58.921 [main] INFO  testCases.demo - Invalid details have been entered
+15:19:04.119 [main] INFO  testCases.listsurgeries - All the list of surgeries have been captured
+15:21:24.727 [main] INFO  testCases.Validdemo - Valid details enabled us to schedule a demo
+15:23:08.804 [main] INFO  testCases.end_to_end - Loaction and specialization selected
+15:26:42.775 [main] INFO  testCases.end_to_end - All the sortings have been done
+15:26:45.441 [main] INFO  testCases.end_to_end - Details of the doctors have been fetched
+15:27:06.971 [main] INFO  testCases.end_to_end - All the list of surgeries have been captured
+15:27:49.870 [main] INFO  testCases.end_to_end - Invalid details have been entered
+15:28:56.186 [main] INFO  testCases.end_to_end - Valid details enabled us to schedule a demo

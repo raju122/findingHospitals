@@ -35,10 +35,11 @@ public class doctordetails {
  
 	@When("provide location and specialisation details")
 	public void provide_location_and_specialisation_details() throws InterruptedException, IOException {
-	    hp.location(b.getProperties().getProperty("text"));
+		hp.location.clear();
+	    hp.location_click(b.getProperties().getProperty("text"));
 	    Thread.sleep(2000);
 		hp.locationspec();
-		hp.department(b.getProperties().getProperty("dep"));
+		hp.department_click(b.getProperties().getProperty("dep"));
 		hp.specdep();
 	    
 		
@@ -46,7 +47,7 @@ public class doctordetails {
  
 	@When("Apply all filter options")
 	public void Apply_all_filter_options() throws InterruptedException {
-	    // Write code here that turns the phrase above into concrete actions
+	    
         dc.patientstories();
 		
 		dc.dropdownlist(dc.storieslist);
@@ -71,15 +72,14 @@ public class doctordetails {
  
 	@Then("print first five doctor detials")
 	public void print_first_five_doctor_detials() {
-	    // Write code here that turns the phrase above into concrete actions
+	    
 		dc.doctordetails(dc.details);
 	    
 	}
  
 	@Then("click on surgiers")
 	public void click_on_surgiers() {
-	    // Write code here that turns the phrase above into concrete actions
-
+	   
 		sg.home_surgeries();
 		
 	   
@@ -87,7 +87,7 @@ public class doctordetails {
  
 	@Then("print list of surgiers")
 	public void print_list_of_surgiers() {
-	    // Write code here that turns the phrase above into concrete actions
+	    
 		sg.listofsurgeries(sg.surgerieslist);
 	  
 	}

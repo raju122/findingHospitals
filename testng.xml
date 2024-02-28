@@ -13,6 +13,8 @@
   <run>
      <include name="sanity"/>
      <include name="regression"/>
+      <include name="smoke"/>
+     
   
   </run>
   </groups>
@@ -20,9 +22,10 @@
     <classes>
        
      <class name="testCases.home"/>
-       <class name="testCases.demo"/>
+        <class name="testCases.demo"/>
       <class name="testCases.listsurgeries"/>
       <class name="testCases.Validdemo"/> 
+      <class name="testCases.end_to_end"/> 
       
     </classes>
   

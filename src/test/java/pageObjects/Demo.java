@@ -18,8 +18,12 @@ public class Demo extends Basepage {
 	WebElement corporates;
 	
 	@FindBy(xpath="//*[@id=\"root\"]/div/div/div[1]/div[1]/div[2]/div/div[3]/div[1]/span/div/div[1]/a")
-	
 	WebElement wellnessplan;
+	@FindBy(xpath="//*[@id=\"__next\"]/main/div/div[1]/div/div[3]/div/div[3]/div[1]/span/span[2]")
+	WebElement corporatesfromsurgeries;
+	@FindBy(xpath="//*[@id=\"__next\"]/main/div/div[1]/div/div[3]/div/div[3]/div[1]/span/div/div[1]/a")
+	WebElement wellnessfromsurgeries;
+	
 	@FindBy(xpath="//*[@id=\"name\"]")
 	WebElement input_name;
 	@FindBy(xpath="//*[@id=\"organizationName\"]")
@@ -45,7 +49,15 @@ public class Demo extends Basepage {
 	public void click_wellnessplan() {
 		wellnessplan.click();
 	}
-	
+	public void clickcs() {
+		corporatesfromsurgeries.click();
+	}
+	public void clickws() {
+		wellnessfromsurgeries.click();
+	}
+	public WebElement scrollup() {
+		return corporatesfromsurgeries;
+	}
 	public void details(List<String> list) {
 		
 		input_name.sendKeys(list.get(0));

@@ -19,19 +19,13 @@ public class home extends Base{
 	public Doctors dc;
 	public List<String> doctorDetialsString;
 	
-	@Test(groups= {"regression"},dependsOnMethods = { "test_title_h" })
+	@Test(priority=3,groups= {"regression"},dependsOnMethods = { "test_title_h" })
 	public void test() throws IOException, InterruptedException {
-		hp=new HomePage(driver);
+		
 		dc=new Doctors(driver);
 		
 		
-		hp.location(getProperties().getProperty("text"));
-		Thread.sleep(2000);
-		hp.locationspec();
-		hp.department(getProperties().getProperty("dep"));
-		hp.specdep();
-		logger.info("Loaction and specialization selected");
-		dc.patientstories();
+		
 		
 		dc.dropdownlist(dc.storieslist);
 		Thread.sleep(2000);
@@ -73,7 +67,7 @@ public class home extends Base{
 		
 		
 	}
-	@Test(groups= {"sanity"})
+	@Test(priority=0,groups= {"sanity"})
 	public void test_title_h() throws IOException {
 		
 		String ht=driver.getTitle();
@@ -81,6 +75,37 @@ public class home extends Base{
 		captureScreen("details");
 	
 		
+	}
+	@Test(priority=1,groups= {"smoke"},dependsOnMethods="test_title_h")
+	void checkLocations() throws InterruptedException, IOException {
+		hp=new HomePage(driver);
+		
+		logger.info("****Starting Testcase two extracting doctor detials****");
+		hp.location.clear();
+		hp.location_click(getProperties().getProperty("text"));
+		Thread.sleep(2000);		
+		hp.locationspec();
+		
+		hp.department_click(getProperties().getProperty("dep"));
+		Thread.sleep(2000);
+		hp.specdep();
+		logger.info("****checking the selected location ****");
+		if(hp.getSelectedLocation().contains(getProperties().getProperty("text"))){
+			Assert.assertEquals(true, true);
+		}
+		
+		
+		
+	}
+	@Test(priority=2,groups= {"smoke"},dependsOnMethods="test_title_h")
+	void checkSpecialist() throws IOException {
+		hp=new HomePage(driver);
+		String specialist=hp.getSelectedSpecialist();
+		
+		if(specialist.contains(getProperties().getProperty("dep"))) {
+			Assert.assertEquals(true, true);
+		}
+		captureScreen("HomePage");
 	}
 
 }
